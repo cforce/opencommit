@@ -37,12 +37,7 @@ const validateConfig = (
 
 export const configValidators = {
   [CONFIG_KEYS.OPENAI_API_KEY](value: any) {
-    validateConfig(CONFIG_KEYS.OPENAI_API_KEY, value, 'Cannot be empty');
-    validateConfig(
-      CONFIG_KEYS.OPENAI_API_KEY,
-      value.startsWith('sk-'),
-      'Must start with "sk-"'
-    );
+    validateConfig(CONFIG_KEYS.OPENAI_API_KEY, value, 'Cannot be empty');    
     validateConfig(
       CONFIG_KEYS.OPENAI_API_KEY,
       value.length === 51,
